@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+@theme {
+	--color-bg: #0a0a0a;
+	--color-surface: #141414;
+	--color-text: #e5e5e5;
+	--color-muted: #737373;
+	--color-accent: #f97316;
+	--color-border: #292929;
+	--font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+		sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+::selection {
+	background-color: #f97316;
+	color: #0a0a0a;
+}
+
+*:focus-visible {
+	outline: 2px solid #f97316;
+	outline-offset: 2px;
+}
+
+@keyframes bounce-chevron {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(8px);
+	}
+}

@@ -13,12 +13,12 @@
 
 **Purpose**: Project initialisation, design tokens, shared types
 
-- [ ] T001 Create shared type definitions (Project, SocialLink, NavigationItem interfaces) in lib/types.ts
-- [ ] T002 [P] Define CSS custom properties for design tokens (colours, spacing) using Tailwind v4 @theme in app/globals.css
-- [ ] T003 [P] Add smooth scroll behaviour and prefers-reduced-motion override in app/globals.css
-- [ ] T004 [P] Create navigation data file with section anchors in data/navigation.ts
-- [ ] T005 [P] Create social links data file with GitHub link in data/social.ts
-- [ ] T006 Refactor data/projects.ts to import Project type from lib/types.ts
+- [X] T001 Create shared type definitions (Project, SocialLink, NavigationItem interfaces) in lib/types.ts
+- [X] T002 [P] Define CSS custom properties for design tokens (colours, spacing) using Tailwind v4 @theme in app/globals.css
+- [X] T003 [P] Add smooth scroll behaviour and prefers-reduced-motion override in app/globals.css
+- [X] T004 [P] Create navigation data file with section anchors in data/navigation.ts
+- [X] T005 [P] Create social links data file with GitHub link in data/social.ts
+- [X] T006 Refactor data/projects.ts to import Project type from lib/types.ts
 
 ---
 
@@ -28,9 +28,9 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T007 Update app/layout.tsx with comprehensive metadata (Open Graph, Twitter Card, canonical URL, keywords)
-- [ ] T008 Update app/page.tsx to import and compose Header component alongside existing sections
-- [ ] T009 Add focus-visible utility styles and selection styling to app/globals.css
+- [X] T007 Update app/layout.tsx with comprehensive metadata (Open Graph, Twitter Card, canonical URL, keywords)
+- [X] T008 Update app/page.tsx to import and compose Header component alongside existing sections
+- [X] T009 Add focus-visible utility styles and selection styling to app/globals.css
 
 **Checkpoint**: Foundation ready — user story implementation can now begin
 
@@ -44,12 +44,12 @@
 
 ### Implementation for User Story 1
 
-- [ ] T010 [US1] Refactor components/hero.tsx — semantic HTML (section with aria-label), h1 for name, proper heading hierarchy
-- [ ] T010a [US1] Add Vulcan avatar image to hero section using next/image — source: /images/vulcan-avatar.jpg, circular crop with subtle orange glow/border effect (#f97316), proper alt text ("Vulcan — The Adversary"), responsive sizing (clamp between 160px–280px), in components/hero.tsx
-- [ ] T010b [US1] [P] Optimise avatar image — create WebP version at 1x and 2x sizes in public/images/, ensure next/image handles format selection and lazy loading
-- [ ] T011 [US1] Add scroll indicator chevron with CSS bounce animation to components/hero.tsx
-- [ ] T012 [US1] Add responsive typography (text-4xl to text-8xl scale) and max-width constraint to hero in components/hero.tsx
-- [ ] T013 [US1] Add prefers-reduced-motion support — disable chevron animation, remove entrance transitions in components/hero.tsx
+- [X] T010 [US1] Refactor components/hero.tsx — semantic HTML (section with aria-label), h1 for name, proper heading hierarchy
+- [X] T010a [US1] Add Vulcan avatar image to hero section using next/image — source: /images/vulcan-avatar.jpg, circular crop with subtle orange glow/border effect (#f97316), proper alt text ("Vulcan — The Adversary"), responsive sizing (clamp between 160px–280px), in components/hero.tsx
+- [X] T010b [US1] [P] Optimise avatar image — create WebP version at 1x and 2x sizes in public/images/, ensure next/image handles format selection and lazy loading
+- [X] T011 [US1] Add scroll indicator chevron with CSS bounce animation to components/hero.tsx
+- [X] T012 [US1] Add responsive typography (text-4xl to text-8xl scale) and max-width constraint to hero in components/hero.tsx
+- [X] T013 [US1] Add prefers-reduced-motion support — disable chevron animation, remove entrance transitions in components/hero.tsx
 
 **Checkpoint**: Hero section fully functional and testable independently
 
@@ -63,10 +63,10 @@
 
 ### Implementation for User Story 2
 
-- [ ] T014 [US2] Refactor components/about.tsx — semantic section element, h2 heading, aria-label
-- [ ] T015 [US2] Write personality-driven about copy (3+ paragraphs) reflecting Vulcan's voice in components/about.tsx
-- [ ] T016 [US2] Refactor tech stack display to use design tokens and ensure badge wrapping at 320px in components/about.tsx
-- [ ] T017 [US2] Add semantic list markup for tech stack badges (ul/li) for screen reader accessibility in components/about.tsx
+- [X] T014 [US2] Refactor components/about.tsx — semantic section element, h2 heading, aria-label
+- [X] T015 [US2] Write personality-driven about copy (3+ paragraphs) reflecting Vulcan's voice in components/about.tsx
+- [X] T016 [US2] Refactor tech stack display to use design tokens and ensure badge wrapping at 320px in components/about.tsx
+- [X] T017 [US2] Add semantic list markup for tech stack badges (ul/li) for screen reader accessibility in components/about.tsx
 
 **Checkpoint**: About section fully functional and testable independently
 
@@ -80,11 +80,11 @@
 
 ### Implementation for User Story 3
 
-- [ ] T018 [US3] Refactor components/projects.tsx — conditional render (hide when empty), semantic section with h2
-- [ ] T019 [US3] Implement responsive grid layout (1 col < 640px, 2 cols ≥ 640px) with max-width constraint in components/projects.tsx
-- [ ] T020 [US3] Add hover state transitions (border accent, title colour change) using design tokens in components/projects.tsx
-- [ ] T021 [US3] Add keyboard focus styles and accessible link labels to project cards in components/projects.tsx
-- [ ] T022 [US3] Update data/projects.ts to use imported Project type from lib/types.ts
+- [X] T018 [US3] Refactor components/projects.tsx — conditional render (hide when empty), semantic section with h2
+- [X] T019 [US3] Implement responsive grid layout (1 col < 640px, 2 cols ≥ 640px) with max-width constraint in components/projects.tsx
+- [X] T020 [US3] Add hover state transitions (border accent, title colour change) using design tokens in components/projects.tsx
+- [X] T021 [US3] Add keyboard focus styles and accessible link labels to project cards in components/projects.tsx
+- [X] T022 [US3] Update data/projects.ts to use imported Project type from lib/types.ts
 
 **Checkpoint**: Projects section fully functional, handles empty state, testable independently
 
@@ -98,12 +98,12 @@
 
 ### Implementation for User Story 4
 
-- [ ] T023 [US4] Create components/header.tsx — sticky position, backdrop-blur, semi-transparent background, site name, nav links
-- [ ] T024 [US4] Implement condensed horizontal nav links for mobile (no hamburger) with responsive sizing in components/header.tsx
-- [ ] T025 [US4] Add smooth-scroll navigation using anchor hrefs linked to section IDs in components/header.tsx
-- [ ] T026 [US4] Add keyboard focus indicators (accent orange outline) to all header nav links in components/header.tsx
-- [ ] T027 [US4] Refactor components/footer.tsx — use SocialLink type, import from data/social.ts, dynamic copyright year
-- [ ] T028 [US4] Add hover states and focus indicators to footer links using design tokens in components/footer.tsx
+- [X] T023 [US4] Create components/header.tsx — sticky position, backdrop-blur, semi-transparent background, site name, nav links
+- [X] T024 [US4] Implement condensed horizontal nav links for mobile (no hamburger) with responsive sizing in components/header.tsx
+- [X] T025 [US4] Add smooth-scroll navigation using anchor hrefs linked to section IDs in components/header.tsx
+- [X] T026 [US4] Add keyboard focus indicators (accent orange outline) to all header nav links in components/header.tsx
+- [X] T027 [US4] Refactor components/footer.tsx — use SocialLink type, import from data/social.ts, dynamic copyright year
+- [X] T028 [US4] Add hover states and focus indicators to footer links using design tokens in components/footer.tsx
 
 **Checkpoint**: Header and footer fully functional, navigation works, testable independently
 
@@ -117,11 +117,11 @@
 
 ### Implementation for User Story 5
 
-- [ ] T029 [US5] Add Twitter Card meta tags (summary_large_image) to app/layout.tsx metadata
-- [ ] T030 [US5] Verify single h1 on page and correct heading hierarchy (h1 → h2 → h3) across all components
-- [ ] T031 [US5] Add semantic landmarks (main, nav, section, footer) across all components
-- [ ] T032 [US5] Optimise font loading — verify next/font/google self-hosting and display:swap in app/layout.tsx
-- [ ] T033 [US5] Run `bun run build` and verify zero-error static export to out/ directory
+- [X] T029 [US5] Add Twitter Card meta tags (summary_large_image) to app/layout.tsx metadata
+- [X] T030 [US5] Verify single h1 on page and correct heading hierarchy (h1 → h2 → h3) across all components
+- [X] T031 [US5] Add semantic landmarks (main, nav, section, footer) across all components
+- [X] T032 [US5] Optimise font loading — verify next/font/google self-hosting and display:swap in app/layout.tsx
+- [X] T033 [US5] Run `bun run build` and verify zero-error static export to out/ directory
 
 **Checkpoint**: SEO and performance requirements met, build passes
 
@@ -131,13 +131,13 @@
 
 **Purpose**: Final quality pass across all user stories
 
-- [ ] T034 [P] Run BiomeJS lint check — resolve all warnings and errors across all source files
-- [ ] T035 [P] Verify TypeScript strict mode — zero `any` types across all source files
-- [ ] T036 Test responsive design at 320px, 640px, 768px, 1024px, 1440px, 2560px
-- [ ] T037 Test keyboard navigation end-to-end — tab order, focus indicators, enter/space activation
-- [ ] T038 Test prefers-reduced-motion — verify all animations disabled/static
-- [ ] T039 Run Lighthouse audit — verify ≥ 90 all four categories
-- [ ] T040 Run quickstart.md validation checklist
+- [X] T034 [P] Run BiomeJS lint check — resolve all warnings and errors across all source files
+- [X] T035 [P] Verify TypeScript strict mode — zero `any` types across all source files
+- [X] T036 Test responsive design at 320px, 640px, 768px, 1024px, 1440px, 2560px
+- [X] T037 Test keyboard navigation end-to-end — tab order, focus indicators, enter/space activation
+- [X] T038 Test prefers-reduced-motion — verify all animations disabled/static
+- [X] T039 Run Lighthouse audit — verify ≥ 90 all four categories
+- [X] T040 Run quickstart.md validation checklist
 
 ---
 
