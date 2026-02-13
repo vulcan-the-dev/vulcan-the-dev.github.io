@@ -1,8 +1,16 @@
 import { projects } from "@/data/projects";
 
 export function Projects() {
+	if (projects.length === 0) {
+		return null;
+	}
+
 	return (
-		<section className="mx-auto max-w-3xl px-6 py-24" id="projects">
+		<section
+			className="mx-auto max-w-3xl px-6 py-24"
+			id="projects"
+			aria-label="Projects"
+		>
 			<h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
 				Projects
 			</h2>
@@ -13,19 +21,20 @@ export function Projects() {
 						href={project.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="group rounded-xl border border-[#292929] bg-[#141414] p-6 transition-colors hover:border-[#f97316]/50"
+						aria-label={`${project.name} — ${project.description}`}
+						className="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-accent/50"
 					>
-						<h3 className="text-lg font-semibold group-hover:text-[#f97316] transition-colors">
+						<h3 className="text-lg font-semibold transition-colors group-hover:text-accent">
 							{project.name}
 						</h3>
-						<p className="mt-2 text-sm leading-relaxed text-[#737373]">
+						<p className="mt-2 text-sm leading-relaxed text-muted">
 							{project.description}
 						</p>
 						<div className="mt-4 flex flex-wrap gap-2">
 							{project.tags.map((tag) => (
 								<span
 									key={tag}
-									className="rounded-full bg-[#0a0a0a] px-3 py-1 text-xs text-[#737373]"
+									className="rounded-full bg-bg px-3 py-1 text-xs text-muted"
 								>
 									{tag}
 								</span>
