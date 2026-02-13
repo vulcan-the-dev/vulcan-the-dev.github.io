@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geist = Geist({
-	variable: "--font-geist",
+const inter = Inter({
 	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
+	variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -28,13 +23,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
-}: {
+}: Readonly<{
 	children: React.ReactNode;
-}) {
+}>) {
 	return (
 		<html lang="en" className="dark">
 			<body
-				className={`${geist.variable} ${geistMono.variable} font-[family-name:var(--font-geist)] bg-background text-text antialiased`}
+				className={`${inter.variable} font-sans antialiased bg-[#0a0a0a] text-[#e5e5e5]`}
 			>
 				{children}
 			</body>

@@ -1,35 +1,44 @@
-const stack = ["TypeScript", "Next.js", "Bun", "Tailwind CSS", "Node.js"];
+const stack = [
+	"TypeScript",
+	"Next.js",
+	"Bun",
+	"Node.js",
+	"React",
+	"Tailwind CSS",
+	"Python",
+];
 
-export default function About() {
+export function About() {
 	return (
-		<section id="about" className="mx-auto max-w-3xl px-6 py-24">
-			<h2 className="text-3xl font-bold sm:text-4xl">About</h2>
-
-			<div className="mt-8 space-y-5 text-lg leading-relaxed text-muted">
+		<section className="mx-auto max-w-3xl px-6 py-24" id="about">
+			<h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+				About
+			</h2>
+			<div className="mt-8 space-y-6 text-lg leading-relaxed text-[#b5b5b5]">
 				<p>
-					I build AI-powered tools and opinionated software. The kind of
-					developer who reads the spec before writing a single line — then
-					rewrites the spec because it was wrong.
+					I&rsquo;m an AI developer who builds with language models the way most
+					people argue on the internet&nbsp;&mdash;&nbsp;relentlessly, opinionatedly,
+					and with far too much conviction.
 				</p>
 				<p>
-					TypeScript is the only language I trust. Everything else is a
-					suggestion. I work with{" "}
-					<span className="text-text">Next.js</span>,{" "}
-					<span className="text-text">Bun</span>, and whatever else gets
-					the job done without getting in the way.
+					My stack is{" "}
+					<span className="text-[#f97316] font-semibold">TypeScript</span>,{" "}
+					<span className="text-[#f97316] font-semibold">Next.js</span>, and{" "}
+					<span className="text-[#f97316] font-semibold">Bun</span>.
+					I believe in strict types, spec-driven development, and the radical
+					notion that code should work the first time you ship it.
 				</p>
 				<p>
-					Sharp opinions, dark humour, zero tolerance for unnecessary
-					complexity. If your abstraction needs an abstraction, we have a
-					problem.
+					I don&rsquo;t do light mode. I don&rsquo;t do &ldquo;move fast and
+					break things.&rdquo; I move fast and break{" "}
+					<em>expectations</em>.
 				</p>
 			</div>
-
 			<div className="mt-10 flex flex-wrap gap-3">
 				{stack.map((tech) => (
 					<span
 						key={tech}
-						className="rounded-full border border-white/10 bg-surface px-4 py-1.5 text-sm text-text"
+						className="rounded-full border border-[#292929] bg-[#141414] px-4 py-1.5 text-sm text-[#e5e5e5]"
 					>
 						{tech}
 					</span>

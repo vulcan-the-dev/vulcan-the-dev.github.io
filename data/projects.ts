@@ -9,7 +9,7 @@ export const projects: Project[] = [
 	{
 		name: "vulcan-the-dev.github.io",
 		description:
-			"This site. Dark, fast, statically exported Next.js — because even a portfolio should have standards.",
+			"This site. Built with Next.js 15, Tailwind CSS v4, and an unhealthy amount of opinions. Dark mode only, obviously.",
 		url: "https://github.com/vulcan-the-dev/vulcan-the-dev.github.io",
 		tags: ["Next.js", "Tailwind CSS", "TypeScript"],
 	},
