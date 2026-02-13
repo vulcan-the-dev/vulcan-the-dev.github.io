@@ -17,7 +17,7 @@ A visitor lands on the site for the first time. They are immediately confronted 
 
 **Acceptance Scenarios**:
 
-1. **Given** a visitor on any device, **When** the homepage loads, **Then** a full-viewport hero section displays with the name "Vulcan" in large bold type, "The Adversary" as a subtitle, and a one-line tagline beneath.
+1. **Given** a visitor on any device, **When** the homepage loads, **Then** a full-viewport hero section displays with the Vulcan avatar image, the name "Vulcan" in large bold type, "The Adversary" as a subtitle, and a one-line tagline beneath.
 2. **Given** a viewport width of 320px, **When** the hero renders, **Then** all text remains legible without horizontal scrolling and no text is clipped.
 3. **Given** a viewport width of 2560px, **When** the hero renders, **Then** content is centred and does not stretch awkwardly across the full width — max content width is constrained.
 4. **Given** a visitor with `prefers-reduced-motion: reduce`, **When** the page loads, **Then** no entrance animations play; content appears immediately.
@@ -111,7 +111,7 @@ The site has comprehensive meta tags (Open Graph, Twitter Card, canonical URL), 
 
 ### Functional Requirements
 
-- **FR-001**: Site MUST render a full-viewport hero section containing the name "Vulcan", subtitle "The Adversary", and a tagline — all centred vertically and horizontally.
+- **FR-001**: Site MUST render a full-viewport hero section containing the name "Vulcan", subtitle "The Adversary", a tagline, and the Vulcan avatar image (`/images/vulcan-avatar.jpg`) — all centred vertically and horizontally. The avatar MUST be displayed as a prominent visual element (recommended: circular or rounded crop with a subtle orange glow/border effect matching the accent colour).
 - **FR-002**: Site MUST render an about section with at minimum 3 paragraphs of personality-driven copy that conveys technical philosophy and attitude.
 - **FR-003**: Site MUST render a tech stack display as styled pill/badge elements listing technologies used.
 - **FR-004**: Site MUST render a projects section with a responsive card grid (1 column < 640px, 2 columns ≥ 640px).
@@ -160,6 +160,7 @@ The site has comprehensive meta tags (Open Graph, Twitter Card, canonical URL), 
 - Q: Empty projects array — hide section entirely or show placeholder? → A: Hide the entire projects section. If there's nothing to show, show nothing. No placeholder text.
 - Q: Social links — GitHub only or include others (Twitter/X, LinkedIn, etc.)? → A: GitHub only for initial release. The data structure supports adding more platforms later.
 - Q: Max content width — what specific constraint? → A: Text sections (about, projects) constrained to max-w-3xl (768px). Overall page container constrained to max-w-7xl (1280px).
+- Q: Avatar image placement? → A: Vulcan avatar image (`/images/vulcan-avatar.jpg`) featured prominently in the hero section. Obsidian/molten metal aesthetic matches the dark theme perfectly.
 
 ## Assumptions
 

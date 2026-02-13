@@ -45,6 +45,8 @@
 ### Implementation for User Story 1
 
 - [ ] T010 [US1] Refactor components/hero.tsx — semantic HTML (section with aria-label), h1 for name, proper heading hierarchy
+- [ ] T010a [US1] Add Vulcan avatar image to hero section using next/image — source: /images/vulcan-avatar.jpg, circular crop with subtle orange glow/border effect (#f97316), proper alt text ("Vulcan — The Adversary"), responsive sizing (clamp between 160px–280px), in components/hero.tsx
+- [ ] T010b [US1] [P] Optimise avatar image — create WebP version at 1x and 2x sizes in public/images/, ensure next/image handles format selection and lazy loading
 - [ ] T011 [US1] Add scroll indicator chevron with CSS bounce animation to components/hero.tsx
 - [ ] T012 [US1] Add responsive typography (text-4xl to text-8xl scale) and max-width constraint to hero in components/hero.tsx
 - [ ] T013 [US1] Add prefers-reduced-motion support — disable chevron animation, remove entrance transitions in components/hero.tsx
@@ -191,7 +193,7 @@
 
 ## Notes
 
-- Total tasks: 40
-- Tasks per story: US1=4, US2=4, US3=5, US4=6, US5=5, Setup=6, Foundation=3, Polish=7
+- Total tasks: 42
+- Tasks per story: US1=6, US2=4, US3=5, US4=6, US5=5, Setup=6, Foundation=3, Polish=7
 - No test tasks generated (not explicitly requested in spec)
 - All paths are relative to repository root
